@@ -28,3 +28,5 @@ Throughout development, I utilized Git and GitHub for version control, facilitat
 - FAQ | https://www.jqueryscript.net/accordion/vertical-accordion-menu-faq.html
 - AOS Effect | https://michalsnik.github.io/aos/ 
 
+# Disclaimer
+The content and context of this website are intended for educational purposes only. All copyrights are reserved by their respective owners.
