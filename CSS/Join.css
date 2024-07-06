@@ -1,0 +1,102 @@
+label{
+    color: rgb(162, 162, 162);
+}
+
+#map {
+    height: 500px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+}
+
+.example{
+    width: 60%;
+}
+
+.form-group {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.space {
+    margin: 20px;
+}
+
+h3 {
+    color: white;
+    padding: 60px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+p {
+    color: white;
+    text-align: left;
+    width: 320px
+}
+
+.line {
+    width: 200px;
+    height: 700px;
+    border-right: 1px solid white;
+    position: absolute;
+    left: 40vw;
+    top: 670px;
+}
+
+@media only screen and (max-width:768px) {
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line {
+        display: none;
+    }
+    
+    .form-group{
+        width: 100vw;
+    }
+    
+    .form-control{
+        width: 90vw;
+        
+    }
+
+    .example {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .accordion{
+        margin: 0;
+        padding: 0;
+    }
+
+    label {
+        margin-left: 25px;
+    }
+
+    h3{
+        text-align: center;
+        width: 100vw;
+    }
+    .accordion-container{
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+}

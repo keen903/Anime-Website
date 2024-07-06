@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- AOS Animate -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<!-- Flickity Slideshow -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="screen">
+<link rel="stylesheet" href="CSS/Slideshow/flickity.css"media="screen">
+
+<!-- Bootstrap CDN CSS File -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<!-- Bootstrap ICON CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+<!-- Plugins CSS For AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<!-- Individual Style File -->
+<link rel="stylesheet" href="./CSS/Home.css">
+
+<!-- CSS For All -->
+<link rel="stylesheet" href="./CSS/Globals.css">
+
+<title>Homepage</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div class="container-fluid center-nav">
+    <a class="navbar-brand" href="Home.html"><img id="logo" src="./IMG/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04"
+        aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor04">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link active magic-hover magic-hover__square" href="#" style="color: white;">Home
+                    <span class="visually-hidden">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link magic-hover magic-hover__square" href="./Story.html">Story</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link magic-hover magic-hover__square" href="./Character.html">Characters</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle magic-hover magic-hover__square" data-bs-toggle="dropdown" href="./Sevice.html" role="button"
+                    aria-haspopup="true" aria-expanded="false">Military</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item">Survey Corps</a>
+                    <a class="dropdown-item">Military Police Brigade</a>
+                    <a class="dropdown-item">Garrison</a>
+                    <a class="dropdown-item">Training Corps</a>
+                    <a class="dropdown-item" href="Explore.html">Explore All</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item">External link</a>
+                </div>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <input class="form-control me-sm-2" type="What are you looking for?" placeholder="What are you looking for?">
+            <button class="btn btn-secondary my-2 my-sm-0"> <a href="Join.html" style="text-decoration: none; color: white;">Join a Team!</a> <i class="bi bi-suit-club"></i></i></button>
+        </form>
+    </div>
+</div>
+</nav>
+
+<!-- Video and Music that Plays and Pause -->
+<!-- - With the help of JS, the MUSIC can be played and paused -->
+<!-- - "data-aos="fade-left" data-aos-anchor=".other-element" data-aos-delay="500" = This is a plugin that animates the text in places to make the website cool -->
+
+    <div class="vid">
+        <video id="my-vid" autoplay muted loop>
+            <source src="./IMG/Video/BG-vid.mov">
+        </video>  
+            <div class="overlay">
+                <h1 data-aos="fade-right" data-aos-delay="200">Welcome To Attack on Titan</h1>
+                <p data-aos="fade-left" data-aos-anchor=".other-element" data-aos-delay="500">Whether you're a seasoned Survey Corps member or a new recruit exploring the world beyond the walls, our club welcomes
+                everyone. Brace yourself for an immersive experience where you can share your passion, make new friends, and revel in
+                the awe-inspiring world of Attack on Titan.</p>
+
+                <!-- To make the audio pause and play with JS -->
+                <button id="music" data-aos="fade-left" data-aos-delay="1000"><i class="bi bi-music-note-beamed"></i></button>
+                <audio id="audio" src="IMG/Video/aot.mp3" loop></audio>
+            </div>
+    </div>
+</div>
+
+<!-- Fitlering Plugins -->
+<!-- - date-tag = kinda like a class or id that when its called, items with the same data with display. Which in this example filters items according to the options -->
+
+<div id="filter-controls">
+    <a data-tag="all" href="#" class="magic-hover magic-hover__square">All</a>
+    <a data-tag="Exciting" href="#" class="magic-hover magic-hover__square">Exciting</a>
+    <a data-tag="Saddest" href="#" class="magic-hover magic-hover__square">Saddest</a>
+    <a data-tag="Depressing" href="#" class="magic-hover magic-hover__square">Depressing</a>
+    <a data-tag="Movies" href="#" class="magic-hover magic-hover__square">Movies</a>
+</div>
+
+<!-- Series Grid layout -->
+<!-- - I used grid to display the series poster. It has has been set to repeat the layout 3x in each row  -->
+<!-- - Each image also has zoom in effect to add animation when a user scroll down the page -->
+
+<div class="grid-container" id="myList">
+    <div class="grid-items item" data-category="#">
+        <img data-aos="zoom-in" data-aos-delay="100" width="281px" height="412px" src="IMG/Series/Season 1.jpeg" alt="">
+        <h5>Season 1 </h5>
+    </div>
+    <div class="grid-items item" data-category="#">
+        <img data-aos="zoom-in" data-aos-delay="100" width="289px" src="IMG/Series/Season 2.jpeg" alt="">
+        <h5>Season 2</h5>
+    </div>
+    <div class="grid-items item" data-category="Exciting">
+        <img data-aos="zoom-in" data-aos-delay="100" width="281px" height="412px" src="IMG/Series/Season 3.jpeg" alt="">
+        <h5>Season 3</h5>
+    </div>
+    <div class="grid-items item" data-category="Depressing">
+        <img data-aos="zoom-in" data-aos-delay="100" src="IMG/Series/Final pt1.jpeg" alt="">
+        <h5>Final Season part 1</h5>
+    </div>
+    <div class="grid-items item" data-category="Saddest">
+        <img data-aos="zoom-in" data-aos-delay="100" src="IMG/Series/Final pt2.jpeg" alt="">
+        <h5>Final Season part 2</h5>
+    </div>
+    <div class="grid-items item" data-category="Depressing">
+        <img data-aos="zoom-in" data-aos-delay="100" src="IMG/Series/Final pt3.png" alt="">
+        <h5>Final Season part 3</h5>
+    </div>
+    <div class="grid-items item" data-category="Movies">
+        <img data-aos="zoom-in" data-aos-delay="100" src="IMG/Series/Crimson bow and arrow.jpeg" alt="">
+        <h5>AOT - Crimson Bow and Arrow</h5>
+    </div>
+    <div class="grid-items item" data-category="Movies">
+        <img data-aos="zoom-in" data-aos-delay="100" src="IMG/Series/No regrets.jpeg" alt="">
+        <h5>AOT - No Regrets</h5>
+    </div>
+    <div class="grid-items item" data-category="Movies">
+        <img data-aos="zoom-in" data-aos-delay="100" src="IMG/Series/Wings of freedom.jpeg" alt="">
+        <h5>AOT - Wings of Freedom</h5>
+    </div>
+</div>
+
+<!-- Awards Slideshow -->
+<!-- - The awards are automatically slides left for a new group -->
+<!-- - The data-flickity is part of the slider plugin, indicating that the carousel should automatically play or slide through its items.  -->
+
+<div class="home-container2">
+    <h1 id="award" style="text-align: center;">Award Winning Anime</h1>
+    <div class="main-carousel" data-flickity='{ "autoPlay": true }'>
+        <div class="carousel-cell">
+            <img class="medals" src="IMG/Awards/14.png" alt="">
+            <img class="medals" src="IMG/Awards/1.png" alt="">
+            <img class="medals" src="IMG/Awards/3.png" alt="">
+            <img class="medals" src="IMG/Awards/2.png" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img class="medals" src="IMG/Awards/4.png" alt="">
+            <img class="medals" src="IMG/Awards/2.png" alt="">
+            <img class="medals" src="IMG/Awards/5.png" alt="">
+            <img class="medals" src="IMG/Awards/6.png" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img class="medals" src="IMG/Awards/7.png" alt="">
+            <img class="medals" src="IMG/Awards/8.png" alt="">
+            <img class="medals" src="IMG/Awards/9.png" alt="">
+            <img class="medals" src="IMG/Awards/10.png" alt="">
+        </div>
+        <div class="carousel-cell">
+            <img class="medals" src="IMG/Awards/11.png" alt="">
+            <img class="medals" src="IMG/Awards/12.png" alt="">
+            <img class="medals" src="IMG/Awards/22.png" alt="">
+            <img class="medals" src="IMG/Awards/10.png" alt="">
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<!-- - This footer is very straighforward. Each item is contained in a footer-col for easy styling for desktop and mobile -->
+<!-- - Icons has been for the social media links that has a cute hover effect -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">Merchendise</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Keychains</a></li>
+                    <li><a href="#">Posters</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="bi bi-facebook"></i></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Filtering and Sorting Series -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="JS/Filtering/ling-gallery-filter.js"></script>    
+<script src="JS/Filtering/filter.js"></script>
+
+<!-- Slideshow Plugin -->
+<script src="JS/Flickity/flickity.pkgd.min.js"></script>
+<script src="JS/Flickity/flickity.js"></script>
+
+<!-- Magic Mouse Cursor Plugin -->
+<script type="text/javascript"
+    src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+    
+<!-- External JS File for AOS -->
+<script src="JS/Cursor/allCursor.js"></script>
+    
+<!-- AOS Reload Animation Plugins -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- AOS Reload external file JS -->
+<script src="./JS/Aos/animate.js"></script>
+
+<!-- Popper Library for Header -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+    integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Bootstrap Library for Header -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<!-- Music External JS File -->
+<script src="/JS/Home/Music.js"></script>
+
+</body>
+</html>

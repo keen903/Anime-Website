@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- I forgot what this is for. Too scared to delete -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CDN CSS File -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <!-- Leaflet Plugins -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="CSS/leaflet.css">
+
+    <!-- CSS For All -->
+    <link rel="stylesheet" href="CSS/Globals.css">
+
+    <!-- Individual CSS -->
+    <link rel="stylesheet" href="CSS/Join.css">
+
+    <link rel="stylesheet" href="CSS/Faq.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid center-nav">
+            <a class="navbar-brand" href="Home.html"><img id="logo" src="./IMG/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04"
+                aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor04">
+    
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active magic-hover magic-hover__square" href="./Home.html"
+                            style="color: white;">Home
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link magic-hover magic-hover__square" href="Story.html">Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link magic-hover magic-hover__square" href="Character.html">Characters</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle magic-hover magic-hover__square" data-bs-toggle="dropdown"
+                            href="./Sevice.html" role="button" aria-haspopup="true" aria-expanded="false">Military</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item">Survey Corps</a>
+                            <a class="dropdown-item">Military Police Brigade</a>
+                            <a class="dropdown-item">Garrison</a>
+                            <a class="dropdown-item">Training Corps</a>
+                            <a class="dropdown-item">Explore All</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item">External link</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-sm-2" type="What are you looking for?"
+                        placeholder="What are you looking for?">
+                    <button class="btn btn-secondary my-2 my-sm-0"><a href="Join.html"
+                            style="text-decoration: none; color: white;">Join a Team!</a> <i
+                            class="bi bi-suit-club"></i></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="map"></div>
+    
+    <div class="box">
+    <div class="line"></div>     
+    <form class="example" novalidate>
+        <div class="text"><h3 style="text-align: center;">Fill in the required forms</h3></div>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="name" class="form-control space" placeholder="First and Last Name" required>
+        </div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="url" class="form-control space" placeholder="Enter Email Address" required>
+        </div>
+        <div class="form-group">
+            <label>Preffered Teams</label>
+            <select class="form-select form-control space" data-v-min-select="1">
+                <option selected>Select a team</option>
+                <option value="1">Survey Corps</option>
+                <option value="2">Military Police Brigade</option>
+                <option value="3">Garrison Regiment</option>
+                <option value="4">Training Corps</option>
+                <option value="5">Scout Regiment</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Reasonings</label>
+            <textarea class="form-control space" minlength="10" maxlength="165" placeholder="Do you think Eren Jaeger is a Good or Bad person and why?"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Attach your Resume</label>
+            <input type="file" class="form-control space" data-v-min-size="400" data-v-max-size="450" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary form-control space" value="Submit">
+        </div>
+    </form>
+    <div class="location">
+        <h3>Connect With Us</h3>
+        <p><i class="bi bi-telephone"></i> +223 863 3211</p>
+        <p><i class="bi bi-envelope"></i></i> Attackontitan@yahoo.com</p>
+        <p><i class="bi bi-linkedin"></i> Kean Arlantico</p>
+        <p><i class="bi bi-geo-alt"></i></i> 555 Seymour St, Vancouver British Columbia</p>
+    </div>
+    </div>
+
+    <!-- FAQS Plugin -->
+    <!-- - The accordion content are only displayed when the user click on the FAQ -->
+     
+    <div id="accordion" class="accordion-container">
+    <h1 style="color: white; text-align: center; margin: 90px 0;">Frequently Asked Questions</h1>   
+        <h4 class="accordion-title">What is this Website for?</a></h4>
+        <div class="accordion-content">
+            <p id="faq">This website is intended solely for educational purposes related to the anime and manga series "Attack on Titan." The
+            content provided here is for informational and academic use only. The website does not endorse or promote any form of
+            violence, harm, or inappropriate behavior. All references to violence within the context of the "Attack on Titan" series
+            are fictional and should be understood as part of the narrative for analytical and educational discussions</p>
+        </div>
+
+        <h4 class="accordion-title">What is Attack On Titan?</h4>
+        <div class="accordion-content">
+            <p id="faq">Attack on Titan is a Japanese manga and anime series written and illustrated by Hajime Isayama. It is set in a world
+            where humanity resides within enormous walled cities to protect themselves from humanoid creatures known as Titans.</p>
+        </div>
+
+        <h4 class="accordion-title">Is the information on this website spoiler-free?</h4>
+        <div class="accordion-content">
+            <p id="faq">Our goal is to provide a balance between informative content and avoiding major spoilers. However, given the nature of
+            an educational website, some plot details may be discussed in the context of analysis and discussion.</p>
+        </div>
+
+        <h4 class="accordion-title">How can I contact the admin?</h4>
+        <div class="accordion-content">
+            <p id="faq">Contact information for the administrators, including email addresses or a contact form, should be available on the
+            website. Feel free to reach out with any inquiries or concerns.</p>
+        </div>
+
+        <h4 class="accordion-title">Is the website mobile-friendly?</h4>
+        <div class="accordion-content">
+            <p id="faq">Efforts are made to ensure the website is accessible on various devices. However, for the best
+            experience, it is recommended to use a laptop.</p>
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">Merchendise</a></li>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Keychains</a></li>
+                    <li><a href="#">Posters</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="bi bi-facebook"></i></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JQUERY CDN For the FAQ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- External JS File for the FAQ -->
+<script src="JS/Faqs/faq.js"></script>
+
+<!-- Validator CDN Jquery + Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Cursor Scripts + CDN -->
+<script type="text/javascript"
+    src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+
+<script src="/JS/Cursor/allCursor.js"></script>
+
+<!-- Popper Library (Header) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+    integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Bootstrap Library (Header) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    
+<!-- Map External JS for initializing -->
+<script src="JS/Map/map.js"></script>
+
+<!-- Form Validator Plugins -->
+<script src="JS/Form/jbvalidator.min.js"></script>
+
+<!-- Form Initialize -->
+<script src="JS/Form/form.js"></script>
+
+<!-- Form Validator External JS -->
+<script src="JS/Form/jbvalidator.js"></script>
+
+</body>
+</html>

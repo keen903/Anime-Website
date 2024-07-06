@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;800&display=swap');
+
+:root {
+    --bs-tertiary-bg-rgb: 36, 38, 43;
+    --bs-btn-bg-rgb: 255, 255, 255;
+}
+
+/* The CSS Code here are used globally for all the pages. Mainly for header and header */
+
+/* Header CSS */
+
+body {
+    font-family: "Playfair Display";
+    background-color: rgb(21, 39, 56);
+}
+
+html {
+    font-size: 15px;
+}
+
+#logo {
+    width: 3em;
+}
+
+.center-nav {
+    padding: 10px 70px;
+}
+
+.nav-link {
+    margin-left: 50px;
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.btn {
+    border: white 2px solid;
+    background-color: transparent;
+}
+
+button {
+    width: 200px;
+}
+
+/* Footer Styles */
+
+.footer {
+    background-color: #24262b;
+    padding: 50px 90px 40px 90px;
+    margin-top: 8em;
+    bottom: 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(255, 255, 255);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: green;
+    background-color: #ffffff;
+}
+
+/* Header + Footer Responsive */
+
+@media only screen and (max-width: 768px){
+    .center-nav {
+        padding: 0;
+        margin: 20px;
+    }
+
+    #logo{
+        width: 2em;
+    }
+
+    .navbar-toggler{
+        display: flex;
+        align-items: center;
+        background-color: white;
+        width: 40px;
+    }
+
+    .d-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-control{
+        width: 200px;
+    }
+
+    .nav-link{
+        text-align: center;
+        margin: 0 0 40px 0;
+    }
+
+    .footer {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    h4 {
+        text-align: center;
+        padding: 30px 0 30px 30px;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    .footer-col h4::before {
+        display: none;
+    }
+
+    .container,
+    .row {
+        margin-top: 90px;
+        padding: 1px 0 30px 0;
+        width: 100vw;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+    }
+}
+
