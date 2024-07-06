@@ -17,3 +17,9 @@ Adopting an iterative approach, I continuously tested and refined features based
 ### Collaboration and Version Control ✍️
 Throughout development, I utilized Git and GitHub for version control, facilitating collaboration and maintaining a structured workflow. This streamlined the development process and allowed for easy integration of new features and bug fixes.
 
+# What plugins did I used? 
+- Flickity | https://flickity.metafizzy.co/  
+- Slider | https://glidejs.com/ 
+- Filtering | https://isotope.metafizzy.co/filtering
+- Lightbox | https://lokeshdhakar.com/projects/lightbox2/ 
+
