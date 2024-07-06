@@ -1,6 +1,8 @@
 # Introduction 👋
 Hey there! Thanks for visiting. If you're an anime enthusiast like me, you're in for a treat! This site was inspired by my favorite online anime platforms. I aimed to recreate their design and functionality using fundamental front-end development skills.
 
+As part of this school project, I utilized various plugins to enhance the website's functionality and visual appeal, making it more engaging and user-friendly.
+
 # How did I approach this project? 
 ### Planning 📝
 I began by outlining clear project goals and defining the target audience—anime enthusiasts like myself. Understanding user expectations helped in shaping the website's design and functionality.
@@ -21,5 +23,8 @@ Throughout development, I utilized Git and GitHub for version control, facilitat
 - Flickity | https://flickity.metafizzy.co/  
 - Slider | https://glidejs.com/ 
 - Filtering | https://isotope.metafizzy.co/filtering
-- Lightbox | https://lokeshdhakar.com/projects/lightbox2/ 
+- Lightbox | https://lokeshdhakar.com/projects/lightbox2/
+- LeafMap | https://leafmap.org/get-started/
+- FAQ | https://www.jqueryscript.net/accordion/vertical-accordion-menu-faq.html
+- AOS Effect | https://michalsnik.github.io/aos/ 
 
